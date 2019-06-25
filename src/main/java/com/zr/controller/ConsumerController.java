@@ -17,7 +17,7 @@ public class ConsumerController {
     @GetMapping("consumerTest")
     public String test(@RequestParam("count") Integer count) {
         String forObject = null;
-        if (count == 1) {
+        if (count == 123) {
             forObject = restTemplate.getForObject("http://127.0.0.1:8030/providerTest", String.class);
         } else {
             forObject = restTemplate.getForObject("http://127.0.0.1:8040/providerTest", String.class);
